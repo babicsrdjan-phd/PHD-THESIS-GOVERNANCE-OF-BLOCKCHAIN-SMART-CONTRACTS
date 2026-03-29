@@ -5,7 +5,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  
 /**
  * @title   JointCommittee
- * @version 2.1.0
  * @notice  Implements CEFTA Joint Committee governance (Art. 40–41, CEFTA 2006).
  *          Provides proposal creation, per-member voting, and auto-execution
  *          lifecycle on a permissioned set of seven national delegates.
