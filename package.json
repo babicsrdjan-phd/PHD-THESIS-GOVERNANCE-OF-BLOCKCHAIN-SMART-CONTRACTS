@@ -1,0 +1,28 @@
+{
+  "name": "phd-cefta-smart-contract",
+  "version": "2.0.0",
+  "description": "PhD Dissertation — CEFTA Trade Agreement Smart Contract Governance on Ethereum",
+  "author": "Srdjan Babic",
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "verify:sepolia": "hardhat run scripts/verify.js --network sepolia",
+    "node": "hardhat node",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.12",
+    "hardhat": "^2.22.17"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.4"
+  }
+}
