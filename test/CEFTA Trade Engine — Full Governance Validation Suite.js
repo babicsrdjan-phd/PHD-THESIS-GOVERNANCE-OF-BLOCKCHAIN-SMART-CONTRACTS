@@ -36,7 +36,6 @@ describe("CEFTA Trade Engine Full Governance Validation Suite", function () {
     await tariff.setAuthorizedEngine(engine.target);
   });
  
-POSITIVE CASE 1 — No quota country, zero duty (Serbia → Bosnia and Herzegovina)
   // ================================================
   // POSITIVE CASE 1: No quota country, zero duty
   // Scenario: Serbia → Bosnia and Herzegovina
@@ -78,7 +77,6 @@ POSITIVE CASE 1 — No quota country, zero duty (Serbia → Bosnia and Herzegovi
     console.log("END TEST - Executes with zero duty (no quota)");
   });
  
-POSITIVE CASE 2 — Within quota, zero duty (Serbia → Macedonia, qty=20, quota=50)
   // ================================================
   // POSITIVE CASE 2: Within quota, zero duty
   // Scenario: Serbia → Macedonia, 20 tonnes (quota: 50)
@@ -105,7 +103,6 @@ POSITIVE CASE 2 — Within quota, zero duty (Serbia → Macedonia, qty=20, quota
     console.log("END TEST - Within quota zero duty (Macedonia)");
   });
  
-POSITIVE CASE 3 — Quota exceeded, MFN duty paid (Serbia → Macedonia, qty=100, quota=50, duty=100)
   // ================================================
   // POSITIVE CASE 3: Quota exceeded, MFN duty paid
   // Scenario: Serbia → Macedonia, 100 tonnes (quota: 50)
@@ -139,7 +136,6 @@ POSITIVE CASE 3 — Quota exceeded, MFN duty paid (Serbia → Macedonia, qty=100
     console.log("END TEST - Quota exceeded MFN duty paid");
   });
  
-NEGATIVE CASE 1 — Invalid HS code → revert "Unsupported HS Code"
   // ================================================
   // NEGATIVE CASE 1: Invalid HS code
   // Expected: Reverts with "Unsupported HS Code"
@@ -162,7 +158,6 @@ NEGATIVE CASE 1 — Invalid HS code → revert "Unsupported HS Code"
     console.log("END TEST - Invalid HS code reverts");
   });
  
-NEGATIVE CASE 2 — Art.7 insufficient processing → revert "Insufficient processing - Art7"
   // ================================================
   // NEGATIVE CASE 2: Art.7 insufficient processing
   // Expected: Reverts with "Insufficient processing - Art7"
@@ -190,7 +185,6 @@ NEGATIVE CASE 2 — Art.7 insufficient processing → revert "Insufficient proce
     );
   });
  
-NEGATIVE CASE 3 — Non-originating content > 10% → revert "Invalid proof of origin"
   // ================================================
   // NEGATIVE CASE 3: Non-originating content > 10%
   // Expected: Reverts with "Invalid proof of origin"
@@ -214,7 +208,6 @@ NEGATIVE CASE 3 — Non-originating content > 10% → revert "Invalid proof of o
     console.log("END TEST - Non-originating > 10% reverts");
   });
  
-NEGATIVE CASE 4 — Insufficient duty payment → revert "Duty payment insufficient"
   // ================================================
   // NEGATIVE CASE 4: Insufficient duty payment
   // Expected: Reverts with "Duty payment insufficient"
@@ -240,7 +233,6 @@ NEGATIVE CASE 4 — Insufficient duty payment → revert "Duty payment insuffici
     console.log("END TEST - Insufficient duty reverts");
   });
  
-NEGATIVE CASE 5 — Non-member country (Croatia withdrawn) → revert "Exporter not CEFTA member"
   // ================================================
   // NEGATIVE CASE 5: Non-member country (Withdrawn)
   // Expected: Reverts with "Exporter not CEFTA member"
